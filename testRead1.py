@@ -1,6 +1,6 @@
 import pdfplumber
 
-path = 'C:\\Users\\Yang Xing Luo\\Desktop\\pdf\\AXA_BALANCE_PROPERTY_INSURANCE_CO_LTD_IN_THE_FIRST_QUARTER_OF_2018_THREE_THE_SOLVENCY_REPORT.pdf'
+path = '/home/iluo/桌面/pdf/30142345zfxd.pdf'
 pdf = pdfplumber.open(path)
 
 infoDict = {}
@@ -14,7 +14,7 @@ for page in pdf.pages:
         targetIndex = 0
         rowCount = 0
         for row in table:
-            # print(row)
+            print(row)
             if(rowCount == 0):
                 for i in range(0,len(row)):
                     if((str)(row[i]).find("本季度") != -1):
